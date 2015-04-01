@@ -44,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="87" y="-675"/>
         </scene>
-        <!--Item-->
+        <!--Tuition-->
         <scene sceneID="pJO-3l-dXT">
             <objects>
                 <viewController id="bRQ-LB-WpM" customClass="TuitionViewController" customModule="stjos" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,13 +55,90 @@
                     <view key="view" contentMode="scaleToFill" id="dL0-fm-cMz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XQd-e8-xuf">
+                                <rect key="frame" x="45" y="57" width="216" height="29"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4+"/>
+                                </segments>
+                                <connections>
+                                    <action selector="numberOfChildren:" destination="bRQ-LB-WpM" eventType="valueChanged" id="EoB-Sd-ZCl"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1kD-px-uRu">
+                                <rect key="frame" x="96" y="140" width="115" height="29"/>
+                                <segments>
+                                    <segment title="Yes"/>
+                                    <segment title="No"/>
+                                </segments>
+                                <connections>
+                                    <action selector="catholic:" destination="bRQ-LB-WpM" eventType="valueChanged" id="nsk-ca-oV9"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of Children" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BM7-i7-BLb">
+                                <rect key="frame" x="78" y="20" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Practicing Catholic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQf-eM-975">
+                                <rect key="frame" x="78" y="103" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yearly Tuition:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJ9-eH-JSr">
+                                <rect key="frame" x="45" y="204" width="106" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="fee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bs6-Lf-gnL">
+                                <rect key="frame" x="169" y="204" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="fee2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulj-NA-pz8">
+                                <rect key="frame" x="169" y="251" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zet-ji-ovs">
+                                <rect key="frame" x="41" y="406" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="totallabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98v-2t-oHn">
+                                <rect key="frame" x="104" y="406" width="157" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Additional Fees:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGv-gD-D4X">
+                                <rect key="frame" x="27" y="251" width="124" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="RQb-xj-LYA"/>
+                    <tabBarItem key="tabBarItem" title="Tuition" image="dollar" id="RQb-xj-LYA"/>
+                    <connections>
+                        <outlet property="additionalFee" destination="ulj-NA-pz8" id="DvE-sb-Yuz"/>
+                        <outlet property="totalFee" destination="98v-2t-oHn" id="G95-pa-DrA"/>
+                        <outlet property="yearlyFee" destination="Bs6-Lf-gnL" id="flZ-g7-V1P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Srz-NZ-pHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="500.80000000000001" y="408.95999999999998"/>
+            <point key="canvasLocation" x="523" y="408"/>
         </scene>
         <!--About-->
         <scene sceneID="wg7-f3-ORb">
@@ -136,9 +213,26 @@
                     <view key="view" contentMode="scaleToFill" id="Vrh-su-njQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="k14-9R-zeB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vLg-0L-PcK" id="Obe-gF-RJH"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="k14-9R-zeB" secondAttribute="bottom" id="1sl-Iq-xzP"/>
+                            <constraint firstItem="k14-9R-zeB" firstAttribute="top" secondItem="Vrh-su-njQ" secondAttribute="top" id="Uc9-0m-aUp"/>
+                            <constraint firstAttribute="trailing" secondItem="k14-9R-zeB" secondAttribute="trailing" id="ZZs-sG-ToX"/>
+                            <constraint firstItem="k14-9R-zeB" firstAttribute="leading" secondItem="Vrh-su-njQ" secondAttribute="leading" id="hRt-dM-pRc"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="vDs-we-p6m"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map" id="vDs-we-p6m"/>
+                    <connections>
+                        <outlet property="mapView" destination="k14-9R-zeB" id="6L6-1m-0TP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="es8-59-tbj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,7 +251,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Photos" id="7mP-we-E60"/>
+                    <tabBarItem key="tabBarItem" title="Photos" image="picture" id="7mP-we-E60"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gmS-G7-MKV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -165,13 +259,17 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dollar" width="27" height="27"/>
         <image name="home" width="27" height="27"/>
         <image name="info" width="27" height="27"/>
+        <image name="map" width="27" height="27"/>
         <image name="masthead.jpg" width="576" height="238"/>
+        <image name="picture" width="27" height="27"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <color key="tintColor" red="0.41176470588235292" green="0.65490196078431373" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

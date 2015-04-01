@@ -12,7 +12,10 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let color = UIColor(red: 105/255.0, green: 167/255.0, blue: 184/255.0, alpha: 1.0)
+        tabBarController!.tabBar.barTintColor = color
         // Do any additional setup after loading the view, typically from a nib.
+
     }
 
     override func didReceiveMemoryWarning() {
